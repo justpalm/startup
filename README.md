@@ -22,7 +22,7 @@ We always here about the Greek gods and goddesses; but what about the monsters? 
 
 ![Design image](Design.png)
 
-Above is my idea for the possible screens within the game. We start off with the main play screen where we can view the leaderboard or change characters if desired. I then have an example of a game, and how to win. Each square is a new page or view that can be seen.
+Above is my idea for the possible screens within the game. We start off with the main play screen where we can view the leaderboard or change characters if desired. Don't forget being able to view Provo weather too! I then have an example of a game, and how to win. Each square is a new page or view that can be seen.
 
 ```mermaid
 sequenceDiagram
