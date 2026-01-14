@@ -16,13 +16,13 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 ### Elevator pitch
 
-We always here about the Greek gods and goddesses; but what about the monsters? Where's their fame and glory? Well now YOU can *find* and **slay** your own Ancient Greek monsters anywhere, anytime. With the new game The Minotaur, you can traverse a randomly generated maze to find and beat the Minotaur in a fierce enounter of rock, paper, scissors. Find him the quickest, and beat your friends as they try also find and beat this monster of gargantuan proportion. While doing so, you can also check the weather in the best college town known to man: Provo, UT!
+We always here about the Greek gods and goddesses; but what about the monsters? Where's their fame and glory? Well now YOU can *find* and **slay** your own ancient Greek monster anywhere, anytime. With the new game *The Minotaur*, you can traverse a randomly generated maze to find and beat the Minotaur in a fierce enounter of rock🪨, paper📃, scissors✂️. Find him the quickest, and beat your friends as they try also find and beat this monster of gargantuan proportion. While doing so, you can also check the weather in the best college town known to man, Provo, UT!
 
 ### Design
 
 ![Design image](placeholder.png)
 
-Above is my idea for the possible screens within the game. We start off with the main play screen where we can view the leaderboard or change characters if desired. I then have an example of a game, and how to win.
+Above is my idea for the possible screens within the game. We start off with the main play screen where we can view the leaderboard or change characters if desired. I then have an example of a game, and how to win. Each square is a new page or view that can be seen.
 
 ```mermaid
 sequenceDiagram
