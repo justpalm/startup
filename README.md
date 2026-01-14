@@ -2,7 +2,7 @@
 
 [My Notes](notes.md)
 
-*The Minotaur* is a game where players traverse a randomly generated maze in order to find and fight a Minotaur! Players can chose their hero of choice from a list of 6 characters. Players who beat the Minotaur and are able to to be previous times will have their time put on a leaderboard. Friends can compete against each other to see who can have the best score in beating and finding the monster!
+*The Minotaur* is a game where players traverse a randomly generated maze in order to find and fight a Minotaur! Players can chose their hero of choice from a list of 6 characters. Players who beat the Minotaur and are able to beat previous times will have their time put on a leaderboard. Friends can compete against each other to see who can have the best score in beating and finding the monster!
 
 ## 🚀 Specification Deliverable
 
