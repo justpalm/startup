@@ -34,7 +34,7 @@ sequenceDiagram
 ### Key features
 
 - Ability to select different characters
-- Scores and time after each victory are saved permanently
+- Time and username after each victory are saved permanently in the leaderboard.
 - Map tracks the progress of the character
 - Map can be retraversed if desired
 - Randomized map every time with a new Minotaur location
@@ -48,17 +48,17 @@ I am going to use the required technologies in the following ways.
 
 - **HTML** - I will mostly likely need 7 HTML pages: The beginning interface, the leaderboard, changing character page, display Provo weather page, play/maze traversing, fighting, and victory. While they are all somewhat similar, seperate pages I think will be appropiate to have a sense of difference in functionality. Hyperlinks will be used as needed to change pages when certain condition are met within the server, such as finding the Minotaur.
 - **CSS** - I will use CSS to make all the respective pages fun, engaging, and staright forward. Certain styling will have to be done to insert the character and monster seamlessly into the page, as well as changing the color of certain buttons to hint at their functions. Font I intend to keep realitvely uniform throughout the game to keep with continuity.
-- **React** - Provides the play/login, charater choice display, chosing which path to follow during the maze, quitting, rock / paper / scissor selection, inputting the name to be saved in the leaderboard.
+- **React** - Provides the play/login, charater choice display, display weather button, chosing which path to follow during the maze, quitting, rock / paper / scissor selection, and inputting the name to be saved in the leaderboard.
 - **Service** - Service endpoints will most likley contain the following:
-    - Initiate play (This will login and register the user, assigning them randomly a number to then have be associated later with a name at the VICTORY screen to be saved in the Leaderboard part of the Database)
+    - Initiate play (This will login and register the user, assigning them randomly a number to then have be associated later with a name at the VICTORY screen to be saved in the Leaderboard part of the Database. character choice will also be registered with them for their instance of playing.)
     - Quit (Logout)
-    - Randomize new map
+    - Randomize new map (Start alongside with play)
     - Change character
     - Retrieve the leaderboard
     - Move character right / left / go back
     - Fight the Minotaur with a user input
-    - Retrieve weather from Provo
-- **DB/Login** - Stores users wins and registration on a database. Whenever user desire, they can retrieve and review that leaderboard from the initial page.
+    - Retrieve weather info from Provo
+- **DB/Login** - Stores users wins and registration on a database. Will also store user position on the map while game is being played, and character choice. Whenever users desire, they can retrieve and review that leaderboard from the initial page.
 - **WebSocket** - Whenever a user beats the minotaur, their time and name will be broadcasted to other users once saved in the database.
 
 ## 🚀 AWS deliverable
