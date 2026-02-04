@@ -85,12 +85,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
+- [C] **Header, footer, and main content body** - On some of the pages I have this styled and I am still workshoping how best to have them look
+- [X] **Navigation elements** - Yup! I have some nav elements figured out
 - [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
 - [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [X] **Application text content** - I have different text fonts and sizes
+- [ ] **Application images** - I have edited images and types.
 
 ## 🚀 React part 1: Routing deliverable
 
