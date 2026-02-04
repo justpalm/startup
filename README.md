@@ -71,15 +71,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [X] **HTML pages** - I added index, character, defeat, maze rock_paper_scisors, and weather HTML.
+- [X] **Proper HTML element usage** - While I'm sure there's room for improvement, I have succesfully added as many functions as I could to make the pages legible and functional
+- [X] **Links** - I do indeed have various links to the pages that navaige among them
+- [X] **Text** - Have added and put a lot of text to a lot of different places!
+- [X] **3rd party API placeholder** - Yup! This is on the weather.html to get the weather from Provo, Utah displayed
+- [X] **Images** - You will find a plethora of unique images
+- [X] **Login placeholder** - My login is not password dependent, but it does register users when they play the game by their username
+- [X] **DB data placeholder** - Yup, I will have access to the database and services with the construction of the maze, and the getting of the minotaurs response during rock paper and scisors. A lot of the database will be that maze navigation and constructoin though!
+- [X] **WebSocket placeholder** - Yup! Whenever a player finished the game, there will be a message broadcasted announcing the username and time of the player. At the top of gameplay I have where the messages will be broadcasted
 
 ## 🚀 CSS deliverable
 
@@ -135,3 +135,4 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
 - [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
 - [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+
