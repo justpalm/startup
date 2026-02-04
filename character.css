@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+}
+
+header {
+  text-align: center;
+  background-color: rgb(66, 20, 20);
+  flex: 0 80px;
+  border-style: double;
+  font-style:normal;
+  font-size:x-large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+main {
+  flex: 1 calc(100vh - 110px);
+  background-color: rgb(146, 87, 87);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+h4{
+background-color: rgb(201, 133, 31);
+
+
+}
+
+footer {
+  flex: 0 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+menu {
+  flex: 1;
+  display: flex;
+  flex-direction: row !important;
+  list-style: armenian;
+  text-align: center;
+  
+}
+
+table {
+  width: 40%;           /* Critical: not 100% */
+  margin: 0 auto;       /* Centers it */
+  display:inline-table      /* Ensures block behavior */
+}
+
+.navbar-brand {
+  border-bottom: solid rgb(182, 182, 182) thin;
+}
+
+.wrapper {
+  background: radial-gradient(circle, #f5f0e6, #ac9878); /* page bg */
+}
+
+.blend {
+  mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
+}
+
+
+.blend {
+  mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
+}
+
+footer a {
+  float:left;
+}
+
+@media (max-height: 600px) {
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 100vh;
+  }
+}
