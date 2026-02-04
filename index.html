@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>theminotaur</title>
+    <link rel="icon" href="favicon.ico" />
+
+  </head>
+  <body>
+    <!-- Use header, main, and footer elements to give semantic structure -->
+    <header>
+      <h1>The Minotaur<sup>&reg;</sup></h1>
+
+      <!-- Navigation elements -->
+      <nav>
+      <hr/>
+    </header>
+
+    <main>
+
+
+      <h1>Welcome to Adventure</h1>
+        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
+        <img id="Minotaur" 
+     src="the_minotuar.png"
+     width="200">
+        
+        
+        
+        
+          <menu>
+          <h2>Leaderbord:</h1>
+          <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Sally</td>
+            <td>1:58</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>John</td>
+            <td>3:04</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Thomas</td>
+            <td>4:04</td>
+          </tr>
+        </tbody>
+        <!-- This is what the database will pull, but for now here's the data-->
+        </table>
+      
+      </menu>
+      </nav>
+
+
+
+
+
+      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+      
+  <script>
+    const images = [
+      "characters/character_1.png",
+      "characters/character_2.png",
+      "characters/character_3.png"
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const index = parseInt(params.get("img")) || 0;
+
+    document.getElementById("character-img").src = images[index];
+</script>
+
+
+
+      <form method="get" action="character.html">
+        <span>⚔️</span>
+        <input type="username" placeholder="Hero's Name" />
+        <button type="play">PLAY!!!</button>
+      </form>
+
+    </main>
+
+    <footer>
+      <hr />
+      <span class="text-reset">Author Name:</span>
+      <span class="text-reset">Justin Palmer </span>
+      <br />
+      <a href="https://github.com/justpalm/startup.git">GitHub</a>
+    </footer>
+  </body>
+</html>
