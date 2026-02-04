@@ -6,20 +6,24 @@ body {
 
 header {
   text-align: center;
-  background-color: rgb(104, 42, 42);
-  text-decoration: double;
+  background-color: rgb(66, 20, 20);
   flex: 0 80px;
+  border-style: double;
+  font-style:normal;
+  font-size:x-large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
 
 main {
   flex: 1 calc(100vh - 110px);
-  background-color: rgb(121, 69, 69);
+  background-color: rgb(146, 87, 87);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 footer {
@@ -31,10 +35,17 @@ menu {
   display: flex;
   flex-direction: row !important;
   list-style: armenian;
+  text-align: center;
+  
+}
+
+table {
+  width: 40%;           /* Critical: not 100% */
+  margin: 0 auto;       /* Centers it */
+  display:inline-table      /* Ensures block behavior */
 }
 
 .navbar-brand {
-  padding-left;
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 
@@ -51,13 +62,8 @@ menu {
   mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
 }
 
-
-menu .nav-item {
-  padding: 0 0.3em;
-}
-
 footer a {
-  float: right;
+  float:left;
 }
 
 @media (max-height: 600px) {
