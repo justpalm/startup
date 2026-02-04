@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -132,3 +133,81 @@
   </body>
 >>>>>>> e2edf9d26d0970f8f0ddbdfe0266eb0854ee42a4
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>characterselect</title>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    
+      <h1>The Minotaur<sup>&reg;</sup></h1>
+
+      <h4>World: Inseter messages that come from the websocket or game</h4>
+      <!-- Here we will celebrate when other people beat the Minotaur!! -->
+
+      <nav>
+      <h1>Choose your Character</h1>
+          <button onclick="location.href='index.html'">Go Back</button>
+      
+      </nav>
+  </body>
+<button onclick="prevImage()"><<<</button>
+
+<img id="character-img" 
+     src="characters/character_1.png" 
+     width="200">
+
+<button onclick="nextImage()">>>></button>
+
+<script>
+  const images = [
+    "characters/character_1.png",
+    "characters/character_2.png",
+    "characters/character_3.png"
+  ];
+
+  let index = 0;
+
+  function showImage() {
+    document.getElementById("character-img").src = images[index];
+  }
+
+  function nextImage() {
+    index = (index + 1) % images.length;
+    showImage();
+  }
+
+  function prevImage() {
+    index = (index - 1 + images.length) % images.length;
+    showImage();
+  }
+</script>
+
+<!--Whatever character we save will be displayed at a later page -->
+<!-- There will be something here on the databased that is later seen and saved. Somehow I will have to track what type of character they choose from the beginning
+ -->
+
+
+<br>
+<input type="text" id="count" value= "Store the name in the database" readonly />
+      
+ <nav>
+        <span>⚔️</span>
+        <button type="maze" onclick="location.href='maze.html'">FIGHT</button>
+        <span>⚔️</span>
+  </nav>
+
+
+    <footer>
+      <hr/>
+      <span class="text-reset">Author Name:</span>
+      <span class="text-reset">Justin Palmer </span>
+      <br />
+      <a href="https://github.com/justpalm/startup.git">GitHub</a>
+    </footer>
+  </body>
+>>>>>>> 4ec3dbc208736a502383bbedf4515571f6bc958f
