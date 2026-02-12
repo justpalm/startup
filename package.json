@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/justpalm/startup/issues"
   },
-  "homepage": "https://github.com/justpalm/startup#readme"
+  "homepage": "https://github.com/justpalm/startup#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
 }

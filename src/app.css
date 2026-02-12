@@ -68,6 +68,12 @@ table {
   mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+}
+
 footer a {
   float:left;
 }
