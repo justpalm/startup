@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "give-me-a-joke": "^0.5.1"
+  },
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "[My Notes](notes.md)",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justpalm/startup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/justpalm/startup/issues"
+  },
+  "homepage": "https://github.com/justpalm/startup#readme"
+}
