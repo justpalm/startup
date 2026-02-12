@@ -1,16 +1,16 @@
 {
   "dependencies": {
-    "give-me-a-joke": "^0.5.1"
+    "bootstrap": "^5.3.8",
+    "react-bootstrap": "^2.10.10"
   },
   "name": "startup",
   "version": "1.0.0",
   "description": "[My Notes](notes.md)",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
