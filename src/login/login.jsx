@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
   const [heroName, setHeroName] = useState("");
+  const navigate = useNavigate();
 
   return (
     <main>
@@ -39,9 +42,9 @@ export function Login() {
           </table>
         </menu>
       </nav>
+
       <div>
         <span>⚔️</span>
-
         <input
           type="text"
           placeholder="Hero's Name"
@@ -51,13 +54,38 @@ export function Login() {
 
         <br />
 
-        <Button variant="primary" onClick={() => navigate({})}>
-        {Hello}
+        <span>🔑</span>
+        <input
+          type="password"
+          placeholder="Hero's Password"
+        />
+
+        <br />
+
+        <Button
+          variant="primary"
+          onClick={() => navigate(`/character?name=${heroName}`)}
+        >
+          Create User
         </Button>
 
         <br />
 
-        <Button text="Weather?" url="/weather" />
+        <Button
+          variant="primary"
+          onClick={() => navigate(`/character?name=${heroName}`)}
+        >
+          PLAY!!!!!!!
+        </Button>
+
+        <br />
+
+        <Button
+          variant="secondary"
+          onClick={() => navigate("/weather")}
+        >
+          Weather?
+        </Button>
       </div>
     </main>
   );

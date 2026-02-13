@@ -31,6 +31,7 @@ export default function App() {
         <Route path='/maze' element={<Maze />} />
         <Route path='/rock-paper-scissors' element={<Rock_Paper_Scissors />} />
         <Route path='/victory' element={<Victory />} />
+        <Route path='/login' element={<Login />} />
 
       </Routes>
 
