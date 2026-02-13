@@ -20,7 +20,7 @@ export function Maze() {
         
       <menu>
 
-        <button onclick="prevImage()"><<<</button>
+<button onclick="prevImage()"><<<</button>
 
 <img id="maze-img" 
      src="maze/both_options.png" 
@@ -94,7 +94,13 @@ export function Maze() {
     </menu>
       
         <span>⚔️</span>
-        <button type="play" onclick="location.href='rock_paper_scisor.html'">FIGHT</button>
+        <Button
+          size = "sm"
+          variant="info"
+          onClick={() => navigate("/rock_paper_scissors")}
+        >
+          Weather?
+        </Button>
         <span>⚔️</span>
 
 {/* <!-- IF THE MINOTAUR IS ENCOUNTERED, this will get triggered, for now this navigates --> */}
