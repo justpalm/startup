@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
+import c1 from "./characters/character_1.png";
+import c2 from "./characters/character_2.png";
+import c3 from "./characters/character_3.png";
+
 
 
 export function Character() {
   const images = [
-    "characters/character_1.png",
-    "characters/character_2.png",
-    "characters/character_3.png"
+    c1,
+    c2,
+    c3
   ];
 
   const navigate = useNavigate();
@@ -25,31 +29,26 @@ export function Character() {
 
   return (
     <main>
-      <header>
-        <h1>
-          The Minotaur<sup>&reg;</sup>
-        </h1>
-      </header>
 
-      <h4>World: Insert messages that come from the websocket or game</h4>
+      <h4>World: Messages that come from the websocket</h4>
 
       <Button
           variant="secondary"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/")}
         >
           Go Back
       </Button>
 
       <nav>
         <h1>Choose your Character</h1>
-        
       </nav>
 
       {/* Character Image */}
       <img
         id="character-img"
-        src={images[index]}
-        width="200"
+        // src={images[index]}
+        src = {images[index]}
+        width="300"
         alt="Character"
       />
 
@@ -65,16 +64,19 @@ export function Character() {
       <input
         type="text"
         id="count"
-        value="Store the name in the database"
+        value="Hero's Name"
         readOnly
       />
 
       {/* Fight Button */}
       <nav>
         <span>⚔️</span>
-        <button onClick={() => (window.location.href = "maze.html")}>
+        <Button
+          variant="secondary"
+          onClick={() => navigate("/maze")}
+        >
           FIGHT
-        </button>
+        </Button>
         <span>⚔️</span>
       </nav>
     </main>

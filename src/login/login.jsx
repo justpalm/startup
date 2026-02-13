@@ -24,7 +24,7 @@ export function Login() {
 
       <nav>
         <menu>
-          <table>
+          <table style={{ margin: "0 auto" }}>
             <thead>
               <tr>
                 <th>#</th>
@@ -44,44 +44,51 @@ export function Login() {
       </nav>
 
       <div>
-        <span>⚔️</span>
+        
         <input
           type="text"
           placeholder="Hero's Name"
           value={heroName}
           onChange={(e) => setHeroName(e.target.value)}
         />
+        <span>⚔️</span>
 
         <br />
 
-        <span>🔑</span>
+        
         <input
           type="password"
           placeholder="Hero's Password"
         />
+        <span>🔑</span>
 
         <br />
 
         <Button
-          variant="primary"
-          onClick={() => navigate(`/character?name=${heroName}`)}
+          size = "sm"
+          variant="light"
+          onClick={() => navigate()}
         >
           Create User
         </Button>
 
         <br />
+        <br />
 
         <Button
-          variant="primary"
+          size = "lg"
+          variant="dark"
           onClick={() => navigate(`/character?name=${heroName}`)}
         >
           PLAY!!!!!!!
         </Button>
 
         <br />
+        <br />
 
         <Button
-          variant="secondary"
+          size = "sm"
+          variant="info"
           onClick={() => navigate("/weather")}
         >
           Weather?
