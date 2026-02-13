@@ -10,9 +10,11 @@
 
   </head>
 
-  <body>
+  
 
     <main>
+
+      <body>
 
 
       <h1>Welcome to adventure</h1>
@@ -70,24 +72,26 @@
       </nav>
 
 
-  <script>
-    const images = [
-      "characters/character_1.png",
-      "characters/character_2.png",
-      "characters/character_3.png"
-    ];
+      <script>
+        const images = [
+          "characters/character_1.png",
+          "characters/character_2.png",
+          "characters/character_3.png"
+        ];
 
-    const params = new URLSearchParams(window.location.search);
-    const index = parseInt(params.get("img")) || 0;
+      const params = new URLSearchParams(window.location.search);
+      const index = parseInt(params.get("img")) || 0;
 
-    document.getElementById("character-img").src = images[index];
-  </script>
-      <form method="get" action="character.html">
-        <span>⚔️</span>
-        <input type="username" placeholder="Hero's Name" />
-        <button type="play">PLAY!!!</button>
-      </form>
-      <br>
-      <button onclick="location.href='weather.html'">Weather?</button>
-  </body>
+          document.getElementById("character-img").src = images[index];
+        </script>
+
+            <form method="get" action="character.html">
+              <span>⚔️</span>
+              <input type="username" placeholder="Hero's Name" />
+              <button type="play">PLAY!!!</button>
+            </form>
+            <br>
+            <button onclick="location.href='weather.html'">Weather?</button>
+        </body>
+    </main>
 </html>

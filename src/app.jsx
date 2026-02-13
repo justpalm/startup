@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
 import { Character } from './character/character';
 import { Defeat } from './defeat/defeat';
-import { Login } from './login/login';
+
 import { Maze } from './maze/maze';
 import { Rock_Paper_Scissors } from './rock_paper_scissors/rock_paper_scissors';
 import { Victory } from './victory/victory';
@@ -19,9 +20,19 @@ export default function App() {
     <div className="body bg-dark text-light">
       <header>
       <h1>The Minotaur<sup>&reg;</sup></h1>
-    </header>
+      </header>
 
-      <main>App components go here</main>
+      <Routes>
+        <Route path='/' element={<Login />} />
+
+        <Route path='/weather' element={<Weather />} />
+        <Route path='/character' element={<Character />} />
+        <Route path='/defeat' element={<Defeat />} />
+        <Route path='/maze' element={<Maze />} />
+        <Route path='/rock-paper-scissors' element={<Rock_Paper_Scissors />} />
+        <Route path='/victory' element={<Victory />} />
+
+      </Routes>
 
     <footer>
       <hr />
