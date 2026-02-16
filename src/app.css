@@ -29,6 +29,7 @@ main {
 
 h4{
 background-color: rgb(201, 133, 31);
+border-style: ridge;
 }
 
 footer {
@@ -53,6 +54,15 @@ table {
 
 .navbar-brand {
   border-bottom: solid rgb(182, 182, 182) thin;
+}
+
+.custom-btn {
+  background: #fff;
+  color: red;
+  border: 2px solid red;
+  border-radius: 3px;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
 
 .wrapper {

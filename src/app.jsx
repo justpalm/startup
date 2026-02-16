@@ -37,9 +37,7 @@ export default function App() {
 
     <footer>
       <hr />
-      <span class="text-reset">Author Name:</span>
-      <span class="text-reset">Justin Palmer </span>
-      <br />
+      <span class="text-reset">Author Name: Justin Palmer</span>
       <a href="https://github.com/justpalm/startup.git">GitHub</a>
     </footer>
     </div>

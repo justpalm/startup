@@ -72,6 +72,13 @@ export function Login() {
           Create User
         </Button>
 
+        <Button
+          size = "sm"
+          variant="dark"
+          onClick={() => navigate()}
+        >
+          Login
+        </Button>
         <br />
         <br />
 

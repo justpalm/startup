@@ -28,7 +28,12 @@ main {
 }
 
 h4{
-background-color: rgb(201, 133, 31);
+background-color: rgb(153, 114, 57);
+}
+
+h1{
+background-color: rgb(46, 32, 11);
+border-style: ridge;
 }
 
 footer {
@@ -62,6 +67,7 @@ table {
 .blend {
   mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
 }
+
 
 
 .blend {

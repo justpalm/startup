@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import c1 from "./characters/character_1.png";
 import c2 from "./characters/character_2.png";
 import c3 from "./characters/character_3.png";
-
-
+import "./character.css";
 
 export function Character() {
   const images = [
@@ -33,15 +32,13 @@ export function Character() {
       <h4>World: Messages that come from the websocket</h4>
 
       <Button
-          variant="secondary"
+          variant="outline-warning"
           onClick={() => navigate("/")}
-        >
+          size = "lg">
           Go Back
       </Button>
 
-      <nav>
-        <h1>Choose your Character</h1>
-      </nav>
+      <h1>Choose your Character</h1>
 
       {/* Character Image */}
       <img
@@ -49,16 +46,21 @@ export function Character() {
         // src={images[index]}
         src = {images[index]}
         width="300"
+        height = "320"
         alt="Character"
       />
 
       {/* Image Controls */}
       <div>
-        <button onClick={prevImage}>{"<<<"}</button>
-        <button onClick={nextImage}>{">>>"}</button>
+        <Button 
+        onClick={prevImage}
+        variant = "secondary"        
+        >{"<<<"}</Button>
+        <Button 
+        onClick={nextImage}
+        variant = "secondary">{">>>"}</Button>
       </div>
 
-      <br />
 
       {/* Character Name Placeholder */}
       <input
@@ -72,7 +74,8 @@ export function Character() {
       <nav>
         <span>⚔️</span>
         <Button
-          variant="secondary"
+          size = "lg"
+          variant="outline-danger"
           onClick={() => navigate("/maze")}
         >
           FIGHT
