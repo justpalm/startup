@@ -45,7 +45,7 @@ export function Character() {
 
       
 
-      <nav>
+
       {/* Image Controls */}
       <div>
         <Button 
@@ -55,6 +55,7 @@ export function Character() {
         <Button 
         onClick={nextImage}
         variant = "secondary">{">>>"}</Button>
+        <br></br>
         <input
         type="text"
         id="count"
@@ -70,15 +71,15 @@ export function Character() {
 
       {/* Fight Button */}
       
-        <span>⚔️</span>
+        <span></span>
       <Button
           size = "lg"
           variant="outline-danger"
           onClick={() => navigate("/maze")}
         >
-          FIGHT
+        ⚔️ FIGHT ⚔️
       </Button>
-        <span>⚔️                   </span>
+        <span></span>
 
       <Button
           variant="outline-warning"
@@ -86,7 +87,6 @@ export function Character() {
           size = "lg">
           Go Back
       </Button>
-      </nav>
 
     </main>
   );

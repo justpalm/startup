@@ -74,15 +74,20 @@ export function Maze() {
       That function will be implemented later */}
 
 
-      <span>⚔️</span>
       <Button
-        size="sm"
+        size="lg"
         variant="outline - warning"
         onClick={() => navigate("/rock_paper_scissors")}
       >
-        MINOTAUR!!
+      ⚔️ MINOTAUR!! ⚔️
       </Button>
-      <span>⚔️</span>
+
+      <Button
+        variant="outline-warning"
+        onClick={() => navigate("/")}
+        size = "lg">
+        Go Back
+    </Button>
     </main>
   );
 }
