@@ -85,7 +85,7 @@ export function Login() {
         <Button
           size = "lg"
           variant="dark"
-          onClick={() => navigate(`/character?name=${heroName}`)}
+          onClick={() => navigate(`/character`)}
         >
           PLAY!!!!!!!
         </Button>
@@ -95,7 +95,7 @@ export function Login() {
 
         <Button
           size = "sm"
-          variant="info"
+          variant="outline - primary"
           onClick={() => navigate("/weather")}
         >
           Weather?

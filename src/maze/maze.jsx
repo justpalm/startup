@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -29,8 +29,7 @@ export function Maze() {
   }
 
   return (
-    <main className="container-fluid bg-secondary text-center">
-
+    <main className="container-fluidtext-center">
       <h1>The Maze</h1>
 
       <Button
@@ -40,8 +39,7 @@ export function Maze() {
         Go Back
       </Button>
 
-      {/* Maze Image Controls */}
-      <button onClick={prevImage}>{"<<<"}</button>
+      
 
       <img
         id="maze-img"
@@ -51,35 +49,19 @@ export function Maze() {
         alt="Maze"
       />
 
-      <button onClick={nextImage}>{">>>"}</button>
+      <div>
+      <Button
+      variant = "secondary" 
+      onClick={prevImage}>{"<<<"}
+      </Button>
+      <Button 
+      variant = "secondary"   
+      onClick={nextImage}>{">>>"}
+      </Button>
+      </div>
 
-      {/* 
-        Here is where I am going to implement the maze more. 
-        My idea is that I will have a random tree forest node be generated 
-        everytime in the data base. I will
-        then traverse through it as if we are doing a DFS. 
-        If we hit a sink without finding the minotaur, 
-        it'll bring them back to the last splitting node.
-        They can then traverse through a different branch if they will.
-        
-        I will have the images generate depending on what the node is. 
-        When they find the minotaur, it'll stop and switch
-        to rock paper scissors mode!
-      */}
 
-      {/*  
-        If there are two options, display the two forks
-        
-        If it's a dead end, show the dead end.
-
-        If there's one option, display the one option.
-
-        All in all, we need three photos.
-      */}
-
-      {/* For now I will keep the character */}
-
-      <br />
+      {/* comments here are fine */}
 
       <input
         type="text"
@@ -88,23 +70,19 @@ export function Maze() {
         readOnly
       />
 
-      {/* Here I'll throw up messages if there's a bad input that are broek */}
+      {/* This button will appear only when the Minotaur appears. 
+      That function will be implemented later */}
+
 
       <span>⚔️</span>
       <Button
         size="sm"
-        variant="info"
+        variant="outline - warning"
         onClick={() => navigate("/rock_paper_scissors")}
       >
-        Weather?
+        MINOTAUR!!
       </Button>
       <span>⚔️</span>
-
-      {/* 
-        IF THE MINOTAUR IS ENCOUNTERED, this will get triggered,
-        for now this navigates 
-      */}
-
     </main>
   );
 }

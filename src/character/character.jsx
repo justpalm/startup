@@ -31,13 +31,6 @@ export function Character() {
 
       <h4>World: Messages that come from the websocket</h4>
 
-      <Button
-          variant="outline-warning"
-          onClick={() => navigate("/")}
-          size = "lg">
-          Go Back
-      </Button>
-
       <h1>Choose your Character</h1>
 
       {/* Character Image */}
@@ -45,11 +38,14 @@ export function Character() {
         id="character-img"
         // src={images[index]}
         src = {images[index]}
-        width="300"
-        height = "320"
+        width="400"
+        height = "420"
         alt="Character"
       />
 
+      
+
+      <nav>
       {/* Image Controls */}
       <div>
         <Button 
@@ -59,29 +55,39 @@ export function Character() {
         <Button 
         onClick={nextImage}
         variant = "secondary">{">>>"}</Button>
-      </div>
-
-
-      {/* Character Name Placeholder */}
-      <input
+        <input
         type="text"
         id="count"
         value="Hero's Name"
         readOnly
-      />
+      />     
+
+
+      </div>
+
+         
+
 
       {/* Fight Button */}
-      <nav>
+      
         <span>⚔️</span>
-        <Button
+      <Button
           size = "lg"
           variant="outline-danger"
           onClick={() => navigate("/maze")}
         >
           FIGHT
-        </Button>
-        <span>⚔️</span>
+      </Button>
+        <span>⚔️                   </span>
+
+      <Button
+          variant="outline-warning"
+          onClick={() => navigate("/")}
+          size = "lg">
+          Go Back
+      </Button>
       </nav>
+
     </main>
   );
 }
