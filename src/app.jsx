@@ -18,9 +18,20 @@ export default function App() {
   return (
     <BrowserRouter>
     <div className="body bg-dark text-light">
-      <header>
-      <h1>The Minotaur<sup>&reg;</sup></h1>
-      </header>
+    <h1 
+    style={{
+      fontSize: '10rem',
+      fontWeight: '900',
+      color: '#D2691E',
+      textShadow: '6px 6px 0 #8B4513',
+      margin: '40px 0',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+      }}
+    >
+      The Minotaur
+    </h1>
 
       <Routes>
         <Route path='/' element={<Login />} />

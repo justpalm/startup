@@ -29,7 +29,11 @@ export function Character() {
   return (
     <main>
 
-      <h1>Choose your Character</h1>
+      <div style={{ fontSize: '4rem', fontWeight: 'bold'}}>
+      Choose your Character
+      </div>
+
+
 
       <h4>World: Messages that come from the websocket</h4>
 

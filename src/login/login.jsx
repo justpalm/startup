@@ -10,7 +10,9 @@ export function Login() {
   return (
     <main>
 
-      <h1>Welcome to Adventure!</h1>
+      <div style={{ fontSize: '8rem', fontWeight: 'bold'}}>
+      Welcome to Adventure!
+      </div>
       <br></br>
       <div>
       <div className="wrapper">

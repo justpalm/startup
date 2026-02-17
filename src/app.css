@@ -6,7 +6,6 @@ body {
 
 header {
   text-align: center;
-  background-color: rgb(66, 20, 20);
   flex: 0 80px;
   border-style: double;
   font-style:italic;
@@ -18,7 +17,7 @@ header {
 
 main {
   flex: 1 calc(100vh - 110px);
-  background-color: rgb(146, 87, 87);
+  background-color: rgb(150, 118, 118);
   display: flex;
   flex-direction: column;
   align-items: center;
