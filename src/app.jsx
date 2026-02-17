@@ -24,6 +24,7 @@ export default function App() {
       fontWeight: '900',
       color: '#7c1d1dff',
       textShadow: '6px 6px 0 #706c6bff',
+      fontFamily: '"Cinzel", serif',  // Imported Font
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center'
@@ -46,10 +47,13 @@ export default function App() {
       </Routes>
 
     <footer>
-      <br></br>
+
+      <br />
       <span className="text-reset">Author Name: Justin Palmer</span>
-      
+      <br />
       <a href="https://github.com/justpalm/startup.git">GitHub</a>
+      <br></br>
+
     </footer>
     </div>
     </BrowserRouter>

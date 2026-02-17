@@ -13,10 +13,13 @@ export function Rock_Paper_Scissors() {
   return (
     <main>
       <h4>World: Inert messages that comes from the websocket or game</h4>
-      <input 
+      <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
+      Username Displayed
+      </div>
+      {/* <input 
       type="text" 
       id="count" 
-      value="Time - 4:32" readOnly />  {}
+      value="Time - 4:32" readOnly />  {} */}
       
       
       

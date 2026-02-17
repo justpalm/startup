@@ -31,8 +31,11 @@ export function Maze() {
   return (
     <main className="container-fluid text-center">
       <h4>World: Messages that come from the websocket</h4>
+      <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
+      Username Displayed
+      </div>
 
-      <div style={{ fontSize: '4rem', fontWeight: 'bold'}}>
+      <div style={{ fontSize: '4rem', fontWeight: 'bold', fontFamily: '"Cinzel", serif',}}>
       The Maze
       </div>   
 

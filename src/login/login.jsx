@@ -10,7 +10,7 @@ export function Login() {
   return (
     <main>
 
-      <div style={{ fontSize: '8rem', fontWeight: 'bold'}}>
+      <div style={{ fontSize: '4rem', fontWeight: 'bold', fontFamily: '"Cinzel", serif',}}>
       Welcome to Adventure!
       </div>
       <br></br>
@@ -20,7 +20,7 @@ export function Login() {
           src="the_minotuar.png"
           className="blend"
           alt="Minotaur"
-          height="600"
+          height="550"
         />
       </div>
 

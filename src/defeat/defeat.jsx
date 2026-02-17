@@ -11,7 +11,7 @@ export function Defeat() {
   return (
     <main className="container-fluid bg-secondary text-center">
 
-      <div style={{ fontSize: '8rem', fontWeight: 'bold', color: "red" }}>
+      <div style={{ fontSize: '8rem', fontWeight: 'bold', color: "red", textShadow: '6px 6px 0 #706c6bff' }}>
         DEFEAT
       </div>
       <Button

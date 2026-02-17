@@ -11,7 +11,7 @@ export function Weather() {
   return (
     <main className="container-fluid bg-secondary text-center">
 
-      <div style={{ fontSize: '4rem', fontWeight: 'bold' }}>
+      <div style={{ fontSize: '4rem', fontWeight: 'bold', fontFamily: '"Cinzel", serif',}}>
       Provo Weather
       </div>
 
@@ -26,7 +26,7 @@ export function Weather() {
 
         <menu>
         <Button
-          variant="secondary"
+          variant="outline"
           size = "lg"
           onClick={() => navigate("/weather")}
         >
@@ -35,7 +35,7 @@ export function Weather() {
 
 
         <Button
-          variant="secondary"
+          variant="outline-warning"
           size = "lg"
           onClick={() => navigate(`/login`)}
         >

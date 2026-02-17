@@ -14,6 +14,7 @@ header {
 
 
 
+
 main {
   flex: 1 calc(100vh - 110px);
   background-color: rgb(146, 139, 139);
@@ -26,7 +27,7 @@ main {
 }
 
 h4{
-background-color: rgb(214, 135, 103);
+background-color: rgb(139, 123, 116);
 border-style: ridge;
 }
 
@@ -54,19 +55,12 @@ table {
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 
-
-.wrapper {
-  background: radial-gradient(circle, #f5f0e6, #ac9878); /* page bg */
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap');
 
 .blend {
-  mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
+  mix-blend-mode: multiply;  
 }
 
-
-.blend {
-  mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
-}
 
 .body {
   display: flex;
