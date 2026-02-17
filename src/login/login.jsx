@@ -98,7 +98,7 @@ export function Login() {
 
         <Button
           size = "lg"
-          variant="outline-primary"
+          variant="secondary"
           onClick={() => navigate("/weather")}
         >
           Weather?

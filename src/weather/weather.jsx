@@ -16,9 +16,9 @@ export function Weather() {
       </div>
 
       <img
-          src="provo.png"
+          src="src\weather\provo.png"
           className="blend"
-          alt="Minotaur"
+          alt="Provo Canyon"
           height="600"
         />
 
@@ -27,6 +27,7 @@ export function Weather() {
         <menu>
         <Button
           variant="secondary"
+          size = "lg"
           onClick={() => navigate("/weather")}
         >
           Refresh 
@@ -35,22 +36,15 @@ export function Weather() {
 
         <Button
           variant="secondary"
+          size = "lg"
           onClick={() => navigate(`/login`)}
         >
           Go Back
         </Button>
-
-
-
-          {/* <button type="button" onclick="location.href='weather.html'">Refresh</button>
-          <button type="button" onclick="location.href='index.html'">Go Back</button> */}
         </menu>
 
       </nav>
-  
-      
 
-        <br />
 
       
 
