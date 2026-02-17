@@ -24,10 +24,11 @@ export function Login() {
         />
       </div>
 
-      <h2>Leaderboard:</h2>
+     
 
       <nav>
         <menu>
+          <h2>Leaderboard:</h2>
           <table style={{ margin: "0 auto" }}>
             <thead>
               <tr>

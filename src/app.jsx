@@ -18,20 +18,19 @@ export default function App() {
   return (
     <BrowserRouter>
     <div className="body bg-dark text-light">
-    <h1 
+    <h2 
     style={{
       fontSize: '10rem',
       fontWeight: '900',
-      color: '#D2691E',
-      textShadow: '6px 6px 0 #8B4513',
-      margin: '40px 0',
+      color: '#7c1d1dff',
+      textShadow: '6px 6px 0 #706c6bff',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center'
       }}
     >
       The Minotaur
-    </h1>
+    </h2>
 
       <Routes>
         <Route path='/' element={<Login />} />
@@ -47,8 +46,9 @@ export default function App() {
       </Routes>
 
     <footer>
-      <hr />
+      <br></br>
       <span className="text-reset">Author Name: Justin Palmer</span>
+      
       <a href="https://github.com/justpalm/startup.git">GitHub</a>
     </footer>
     </div>

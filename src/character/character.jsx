@@ -29,13 +29,15 @@ export function Character() {
   return (
     <main>
 
+       <h4>World: Messages that come from the websocket</h4>
+
       <div style={{ fontSize: '4rem', fontWeight: 'bold'}}>
       Choose your Character
       </div>
 
 
 
-      <h4>World: Messages that come from the websocket</h4>
+     
 
       {/* Character Image */}
       <img

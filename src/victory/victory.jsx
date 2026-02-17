@@ -11,7 +11,7 @@ export function Victory() {
   return (
     <main className="container-fluid bg-secondary text-center">
 
-      <div style={{ fontSize: '8rem', fontWeight: 'bold', color: "green" }}>
+      <div style={{ fontSize: '8rem', fontWeight: 'bold', color: '6px 6px 0 #0c5223ff', textShadow: '6px 6px 0 #706c6bff', }}>
         VICTORY!!!!!
       </div>
       <Button

@@ -7,7 +7,6 @@ body {
 header {
   text-align: center;
   flex: 0 80px;
-  border-style: double;
   font-style:italic;
   font-size:x-large;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -17,7 +16,7 @@ header {
 
 main {
   flex: 1 calc(100vh - 110px);
-  background-color: rgb(150, 118, 118);
+  background-color: rgb(146, 139, 139);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +26,7 @@ main {
 }
 
 h4{
-background-color: rgb(201, 133, 31);
+background-color: rgb(214, 135, 103);
 border-style: ridge;
 }
 
@@ -55,14 +54,6 @@ table {
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 
-.custom-btn {
-  background: #fff;
-  color: red;
-  border: 2px solid red;
-  border-radius: 3px;
-  padding: 5px 10px;
-  text-transform: uppercase;
-}
 
 .wrapper {
   background: radial-gradient(circle, #f5f0e6, #ac9878); /* page bg */

@@ -30,9 +30,13 @@ export function Maze() {
 
   return (
     <main className="container-fluid text-center">
-      <h1>The Maze</h1>   
-
       <h4>World: Messages that come from the websocket</h4>
+
+      <div style={{ fontSize: '4rem', fontWeight: 'bold'}}>
+      The Maze
+      </div>   
+
+      
 
       <img
         id="maze-img"
