@@ -7,31 +7,35 @@ import c2 from "../character/characters/character_2.png";
 import c3 from "../character/characters/character_3.png";
 
 export function Rock_Paper_Scissors() {
+
+  const navigate = useNavigate();
+  
   return (
     <main>
       <h4>World: Inert messages that comes from the websocket or game</h4>
-      
-      <h1>Rock Paper Scissors</h1>
-      <br />
-      <input type="text" id="count" value="Time - 4:32" readOnly />  {}
+      <input 
+      type="text" 
+      id="count" 
+      value="Time - 4:32" readOnly />  {}
       
       
       
       <img 
         id="Minotaur" 
         src="the_minotuar.png"
-        width="200" 
+        width="400" 
         alt="Minotaur" />  
 
-      <p> Character from Database appears here </p>
 
       <img 
         id="character-img"
         src = {c1}
-        width="200" 
+        width="400" 
         alt="Character" /> 
 
       {/* Fight area */}
+      {/* <p> Character from Database appears here */}
+
       <Button 
       variant= "light"
       onClick={() => {}}>✂️</Button>
@@ -63,10 +67,6 @@ export function Rock_Paper_Scissors() {
           size = "lg">
           Go Back
       </Button>
-
-
-
-
 
     </main>
   );
