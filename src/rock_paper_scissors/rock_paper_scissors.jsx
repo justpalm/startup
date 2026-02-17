@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import c1 from "../character/characters/character_1.png";
 import c2 from "../character/characters/character_2.png";
 import c3 from "../character/characters/character_3.png";
+import minotaur from "./the_minotuar.png"; 
 
 export function Rock_Paper_Scissors() {
 
@@ -25,7 +26,7 @@ export function Rock_Paper_Scissors() {
       
       <img 
         id="Minotaur" 
-        src="the_minotuar.png"
+        src={minotaur}
         width="400" 
         alt="Minotaur" />  
 

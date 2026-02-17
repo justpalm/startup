@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
+import provo from "./provo.png"; 
 
 
 export function Weather() {
@@ -16,7 +17,7 @@ export function Weather() {
       </div>
 
       <img
-          src="src\weather\provo.png"
+          src={provo}
           className="blend"
           alt="Provo Canyon"
           height="600"

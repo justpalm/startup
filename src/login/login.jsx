@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
+import minotaur from "./the_minotuar.png";
 
 export function Login() {
   const [heroName, setHeroName] = useState("");
@@ -17,7 +18,7 @@ export function Login() {
       <div>
       <div className="wrapper">
         <img
-          src="the_minotuar.png"
+          src={minotaur}
           className="blend"
           alt="Minotaur"
           height="550"
