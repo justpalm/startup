@@ -29,7 +29,7 @@ export default function App() {
         <Route path='/character' element={<Character />} />
         <Route path='/defeat' element={<Defeat />} />
         <Route path='/maze' element={<Maze />} />
-        <Route path='/rock-paper-scissors' element={<Rock_Paper_Scissors />} />
+        <Route path='/rock_paper_scissors' element={<Rock_Paper_Scissors />} />
         <Route path='/victory' element={<Victory />} />
         <Route path='/login' element={<Login />} />
 
@@ -37,7 +37,7 @@ export default function App() {
 
     <footer>
       <hr />
-      <span class="text-reset">Author Name: Justin Palmer</span>
+      <span className="text-reset">Author Name: Justin Palmer</span>
       <a href="https://github.com/justpalm/startup.git">GitHub</a>
     </footer>
     </div>

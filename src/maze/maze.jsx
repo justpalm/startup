@@ -29,17 +29,10 @@ export function Maze() {
   }
 
   return (
-    <main className="container-fluidtext-center">
-      <h1>The Maze</h1>
+    <main className="container-fluid text-center">
+      <h1>The Maze</h1>   
 
-      <Button
-        variant="secondary"
-        onClick={() => navigate("/")}
-      >
-        Go Back
-      </Button>
-
-      
+      <h4>World: Messages that come from the websocket</h4>
 
       <img
         id="maze-img"

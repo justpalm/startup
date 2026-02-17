@@ -29,9 +29,9 @@ export function Character() {
   return (
     <main>
 
-      <h4>World: Messages that come from the websocket</h4>
-
       <h1>Choose your Character</h1>
+
+      <h4>World: Messages that come from the websocket</h4>
 
       {/* Character Image */}
       <img

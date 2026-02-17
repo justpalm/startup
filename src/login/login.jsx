@@ -9,8 +9,10 @@ export function Login() {
 
   return (
     <main>
-      <h1>Welcome to Adventure!</h1>
 
+      <h1>Welcome to Adventure!</h1>
+      <br></br>
+      <div>
       <div className="wrapper">
         <img
           src="the_minotuar.png"
@@ -42,6 +44,7 @@ export function Login() {
           </table>
         </menu>
       </nav>
+      </div>
 
       <div>
         
