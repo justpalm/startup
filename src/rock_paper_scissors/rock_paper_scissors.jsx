@@ -1,4 +1,10 @@
-import React from 'react';  // Fixed: "rom" → "from"
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
+import c1 from ".. character/characters/character_1.png";
+import c2 from ".. character/characters/character_2.png";
+import c3 from ".. character/characters/character_3.png";
 
 export function Rock_Paper_Scissors() {
   return (
@@ -14,23 +20,23 @@ export function Rock_Paper_Scissors() {
         id="Minotaur" 
         src="the_minotuar.png"
         width="200" 
-        alt="Minotaur" />  {/* Fixed: self-closing */}
-      
+        alt="Minotaur" />  
+
       <p> Character from Database appears here </p>
 
       <img 
-        id="character-img" 
-        src="characters/character_1.png" 
+        id="character-img"
+        src = {c1}
         width="200" 
-        alt="Character" />  {/* Fixed: self-closing */}
+        alt="Character" /> 
 
       {/* Fight area */}
-      <button onClick={() => {}}>✂️</button>  {/* Fixed: Button → button, onclick → onClick */}
-      <button onClick={() => {}}>🪨</button>
-      <button onClick={() => {}}>📄</button>
+      <Button onClick={() => {}}>✂️</Button>
+      <Button onClick={() => {}}>🪨</Button>
+      <Button onClick={() => {}}>📄</Button>
 
-      <button type="button" onClick={() => window.location.href='_victory_.html'}>Victory</button>  {/* Fixed: onclick → onClick */}
-      <button type="button" onClick={() => window.location.href='defeat.html'}>Defeat</button>
+      <Button variant="button" onClick={() => navigate("/_vistory_")}Victory</Button>
+      <Button variant="button" onClick={() => navigate("/maze")}>Defeat</Button>
 
     </main>
   );
