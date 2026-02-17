@@ -11,7 +11,16 @@ export function Weather() {
   return (
     <main className="container-fluid bg-secondary text-center">
 
-      <h1>Provo Weather</h1>
+      <div style={{ fontSize: '4rem', fontWeight: 'bold' }}>
+      Provo Weather
+      </div>
+
+      <img
+          src="provo.png"
+          className="blend"
+          alt="Minotaur"
+          height="600"
+        />
 
       <nav>
 
@@ -49,8 +58,8 @@ export function Weather() {
         <label for="count">☀️Farenheit</label>
         <input type="text" id="count" value="75°" readonly />
         <br />
-        <label for="count">🌧️Chance of Rain </label>
-        <input type="text" id="count" value="30°" readonly />
+        <label for="count">🌧️% of Rain </label>
+        <input type="text" id="count" value="30%" readonly />
       </div>
 
     </main>

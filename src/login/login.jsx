@@ -97,13 +97,14 @@ export function Login() {
         <br />
 
         <Button
-          size = "sm"
-          variant="outline - primary"
+          size = "lg"
+          variant="outline-primary"
           onClick={() => navigate("/weather")}
         >
           Weather?
         </Button>
       </div>
+      <br></br>
     </main>
   );
 }

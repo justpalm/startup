@@ -35,7 +35,8 @@ export function Rock_Paper_Scissors() {
 
       {/* Fight area */}
       {/* <p> Character from Database appears here */}
-
+      <br></br>
+      <div>
       <Button 
       variant= "light"
       onClick={() => {}}>✂️</Button>
@@ -45,6 +46,8 @@ export function Rock_Paper_Scissors() {
       <Button 
       variant = "light"
       onClick={() => {}}>📄</Button>
+      </div>
+      <br></br>
 
       <Button 
       variant="success"
@@ -55,11 +58,12 @@ export function Rock_Paper_Scissors() {
 
       <Button 
       variant="danger" 
-      onClick={() => navigate("/maze")}
+      onClick={() => navigate("/defeat")}
       >
       Defeat
       </Button>
 
+      <br></br>
 
       <Button
           variant="outline-warning"

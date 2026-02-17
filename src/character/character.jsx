@@ -48,23 +48,23 @@ export function Character() {
 
       {/* Image Controls */}
       <div>
-        <Button 
-        onClick={prevImage}
-        variant = "secondary"        
-        >{"<<<"}</Button>
-        <Button 
-        onClick={nextImage}
-        variant = "secondary">{">>>"}</Button>
-        <br></br>
-        <input
-        type="text"
-        id="count"
-        value="Hero's Name"
-        readOnly
-      />     
-
-
+      <Button
+      variant = "secondary" 
+      onClick={prevImage}>{"<<<"}
+      </Button>
+      <Button 
+      variant = "secondary"   
+      onClick={nextImage}>{">>>"}
+      </Button>
       </div>
+
+  
+      <input
+      type="text"
+      id="count"
+      value="hero's Name"
+      readOnly
+      />
 
          
 

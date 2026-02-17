@@ -47,6 +47,7 @@ export function Maze() {
       variant = "secondary" 
       onClick={prevImage}>{"<<<"}
       </Button>
+      
       <Button 
       variant = "secondary"   
       onClick={nextImage}>{">>>"}
