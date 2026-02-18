@@ -87,8 +87,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 - [C] **Header, footer, and main content body** - On some of the pages I have this styled and I am still workshoping how best to have them look
 - [X] **Navigation elements** - Yup! I have some nav elements figured out
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
+- [X] **Responsive to window resizing** - Felx should be enabled for most of the elements
+- [X] **Application elements** - There are many elemnts included in the HTML.
 - [X] **Application text content** - I have different text fonts and sizes
 - [X] **Application images** - I have edited images and types.
 
@@ -96,9 +96,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - I did not complete this part of the deliverable.
+- [X] **Bundled using Vite** - Vite runs and works on it great!
+- [X] **Components** - We have a ton of buttons, and navigates that allow this to work
+- [X] **Router** - It uses the Router instead of other HTML buttons!
 
 ## 🚀 React part 2: Reactivity deliverable
 

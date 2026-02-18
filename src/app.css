@@ -6,9 +6,7 @@ body {
 
 header {
   text-align: center;
-  background-color: rgb(66, 20, 20);
   flex: 0 80px;
-  border-style: double;
   font-style:italic;
   font-size:x-large;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -16,9 +14,10 @@ header {
 
 
 
+
 main {
   flex: 1 calc(100vh - 110px);
-  background-color: rgb(146, 87, 87);
+  background-color: rgb(146, 139, 139);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +27,8 @@ main {
 }
 
 h4{
-background-color: rgb(201, 133, 31);
+background-color: rgb(139, 123, 116);
+border-style: ridge;
 }
 
 footer {
@@ -55,18 +55,12 @@ table {
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 
-.wrapper {
-  background: radial-gradient(circle, #f5f0e6, #ac9878); /* page bg */
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap');
 
 .blend {
-  mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
+  mix-blend-mode: multiply;  
 }
 
-
-.blend {
-  mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
-}
 
 .body {
   display: flex;
