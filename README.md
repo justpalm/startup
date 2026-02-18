@@ -96,9 +96,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [X] **Bundled using Vite** - Vite runs and works on it great!
-- [X] **Components** - We have a ton of buttons, and navigates that allow this to work
-- [X] **Router** - It uses the Router instead of other HTML buttons!
+- [X] **Bundled using Vite** - Vite runs and works on it great! I followed the instructions and downloaded all the necessary software for it.
+- [X] **Components** - We have a ton of buttons, and navigates that allow this to work. I also took out all the only HTML elements and added some new elements to the .css . 
+- [X] **Router** - It uses the Router instead of other HTML buttons from the app.css! Reformated and made all the necessary files for it.
 
 ## 🚀 React part 2: Reactivity deliverable
 
