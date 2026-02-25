@@ -21,19 +21,39 @@ export function Unauthenticated(props) {
   return (
     <>
       <div>
-        <div className='input-group mb-3'>
-          <span className='input-group-text'>@</span>
-          <input className='form-control' type='text' value={userName} onChange={(e) => setUserName(e.target.value)} placeholder='your@email.com' />
-        </div>
-        <div className='input-group mb-3'>
-          <span className='input-group-text'>🔒</span>
-          <input className='form-control' type='password' onChange={(e) => setPassword(e.target.value)} placeholder='password' />
-        </div>
-        <Button variant='primary' onClick={() => loginUser()} disabled={!userName || !password}>
-          Login
+        <input
+          type="text"
+          placeholder="Hero's Name"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+        />
+        <span>⚔️</span>
+
+        <br />
+
+        
+        <input
+          type="password"
+          placeholder="Hero's Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <span>🔑</span>
+
+        <br />
+
+        <Button
+          size = "sm"
+          variant="light"
+          onClick={() => createUser()} disabled={!userName || !password}>  
+          Create User
         </Button>
-        <Button variant='secondary' onClick={() => createUser()} disabled={!userName || !password}>
-          Create
+
+        <Button
+          size = "sm"
+          variant="dark"
+          onClick={() => loginUser()} disabled={!userName || !password}>
+          Login
         </Button>
       </div>
 

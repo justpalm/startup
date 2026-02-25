@@ -12,8 +12,8 @@ import { AuthState } from './authState';
 
 
 
-export function Login() {
-  const [heroName, setHeroName] = useState("");
+export function Login({ userName, authState, onAuthChange }) {
+  // const [userName, setUserName] = useState("");
   const navigate = useNavigate();
 
   return (
@@ -33,8 +33,7 @@ export function Login() {
         />
       </div>
 
-     
-
+    
       <nav>
         <menu>
           <h2>Leaderboard:</h2>
@@ -59,12 +58,26 @@ export function Login() {
       </div>
 
       <div>
+        {authState === AuthState.Authenticated && (
+          <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
+        )}
+        {authState === AuthState.Unauthenticated && (
+          <Unauthenticated
+            userName={userName}
+            onLogin={(loginUserName) => {
+              onAuthChange(loginUserName, AuthState.Authenticated);
+            }}
+          />
+        )}
+      </div>
+
+      {/* <div>
         
         <input
           type="text"
           placeholder="Hero's Name"
-          value={heroName}
-          onChange={(e) => setHeroName(e.target.value)}
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
         />
         <span>⚔️</span>
 
@@ -107,6 +120,7 @@ export function Login() {
 
         <br />
         <br />
+       
 
         <Button
           size = "lg"
@@ -115,7 +129,7 @@ export function Login() {
         >
           Weather?
         </Button>
-      </div>
+      </div> */}
       <br></br>
     </main>
   );

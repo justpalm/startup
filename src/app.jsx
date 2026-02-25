@@ -10,11 +10,18 @@ import { Rock_Paper_Scissors } from './rock_paper_scissors/rock_paper_scissors';
 import { Victory } from './victory/victory';
 import { Weather } from './weather/weather';
 
+import { AuthState } from './login/authState';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
 export default function App() {
+  const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+  const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+  const [authState, setAuthState] = React.useState(currentAuthState);
+
+
   return (
     <BrowserRouter>
     <div className="body bg-dark text-light">
@@ -34,7 +41,14 @@ export default function App() {
     </h2>
 
       <Routes>
-        <Route path='/' element={<Login />} />
+        <Route path='/' element={<Login
+                userName={userName}
+                authState={authState}
+                onAuthChange={(userName, authState) => {
+                  setAuthState(authState);
+                  setUserName(userName);
+                }}
+              />} />
 
         <Route path='/weather' element={<Weather />} />
         <Route path='/character' element={<Character />} />
