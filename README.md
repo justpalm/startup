@@ -107,6 +107,60 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
 - [ ] **Hooks** - I did not complete this part of the deliverable.
 
+Personal Notes:
+
+Arrow Functions can help very quickly with passing information and what not
+```javascript
+Arrow functions act as lambas and are very helpful:
+function testAll(input, tester) {
+  const result = input.every(tester);
+  return result
+}
+
+const array = ["hello", "my", "sweet"]
+const tester = str => str.length > 3
+
+const result = testAll(array, tester);
+
+console.log(result);
+```
+
+The different uses of the term object. Object can refer to the standard JavaScript objects (e.g. Promise, Map, Object, Function, Date, ...), or it can refer specifically to the JavaScript Object object (i.e. new Object()), or it can refer to any JavaScript object you create (e.g. {a:'a', b:2} ). This overloaded usage can be a bit confusing.
+`
+
+```javascript
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  print() {
+    return 'My name is ' + this.name;
+  }
+}
+
+class Employee extends Person {
+  constructor(name, position) {
+    super(name);
+    this.position = position;
+  }
+
+  print() {
+    return super.print() + '. I am a ' + this.position;
+  }
+}
+
+const e = new Employee('Eich', 'programmer');
+console.log(e.print());
+// OUTPUT: My name is Eich. I am a programmer
+```
+
+
+
+
+
+
+
 ## 🚀 Service deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
