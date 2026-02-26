@@ -7,7 +7,7 @@ import c2 from "./characters/character_2.png";
 import c3 from "./characters/character_3.png";
 import "./character.css";
 
-export function Character() {
+export function Character(userName) {
   const images = [
     c1,
     c2,
@@ -31,11 +31,14 @@ export function Character() {
 
        <h4>World: Messages that come from the websocket</h4>
        <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
-      Username Displayed
+      {
+      console.log(userName)
+    }
       </div>
 
       <div style={{ fontSize: '4rem', fontWeight: 'bold', fontFamily: '"Cinzel", serif',}}>
       Choose your Character
+
       </div>
 
 
@@ -52,8 +55,7 @@ export function Character() {
         alt="Character"
       />
 
-      
-
+    
 
       {/* Image Controls */}
       <div>
@@ -71,7 +73,7 @@ export function Character() {
       <input
       type="text"
       id="count"
-      value="hero's Name"
+      value={localStorage.getItem(userName)}
       readOnly
       />
 

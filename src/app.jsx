@@ -20,7 +20,7 @@ export default function App() {
   const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
   const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
   const [authState, setAuthState] = React.useState(currentAuthState);
-
+  const [character, setCharacter] = React.useState(localStorage.getItem('character') || '');
 
   return (
     <BrowserRouter>
@@ -50,13 +50,36 @@ export default function App() {
                 }}
               />} />
 
+        {/* {console.log(userName)} */}
+
         <Route path='/weather' element={<Weather />} />
-        <Route path='/character' element={<Character />} />
+        <Route path='/character' element={<Character 
+        onCharacterChange={(character) => {
+          userName
+          setCharacter(character);
+          }}
+        
+        
+        
+        />} />
         <Route path='/defeat' element={<Defeat />} />
-        <Route path='/maze' element={<Maze />} />
-        <Route path='/rock_paper_scissors' element={<Rock_Paper_Scissors />} />
+        <Route path='/maze' element={<Maze 
+        userName={userName}
+
+        
+        
+        />} />
+        <Route path='/rock_paper_scissors' element={<Rock_Paper_Scissors userName={userName}/>} />
         <Route path='/victory' element={<Victory />} />
-        <Route path='/login' element={<Login />} />
+        
+        <Route path='/login' element={<Login
+                userName={userName}
+                authState={authState}
+                onAuthChange={(userName, authState) => {
+                  setAuthState(authState);
+                  setUserName(userName);
+                }}
+              />} />
 
       </Routes>
 

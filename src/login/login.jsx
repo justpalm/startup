@@ -70,67 +70,6 @@ export function Login({ userName, authState, onAuthChange }) {
           />
         )}
       </div>
-
-      {/* <div>
-        
-        <input
-          type="text"
-          placeholder="Hero's Name"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-        />
-        <span>⚔️</span>
-
-        <br />
-
-        
-        <input
-          type="password"
-          placeholder="Hero's Password"
-        />
-        <span>🔑</span>
-
-        <br />
-
-        <Button
-          size = "sm"
-          variant="light"
-          onClick={() => navigate()}
-        >
-          Create User
-        </Button>
-
-        <Button
-          size = "sm"
-          variant="dark"
-          onClick={() => navigate()}
-        >
-          Login
-        </Button>
-        <br />
-        <br />
-
-        <Button
-          size = "lg"
-          variant="dark"
-          onClick={() => navigate(`/character`)}
-        >
-          PLAY!!!!!!!
-        </Button>
-
-        <br />
-        <br />
-       
-
-        <Button
-          size = "lg"
-          variant="secondary"
-          onClick={() => navigate("/weather")}
-        >
-          Weather?
-        </Button>
-      </div> */}
-      <br></br>
     </main>
   );
 }

@@ -14,23 +14,30 @@ export function Authenticated(props) {
   }
 
   return (
-    <div>
+    <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',  // horizontal
+        alignItems: 'center',      // vertical (needs height on parent)
+        height: '200px'            // or whatever height you need
+      }}>
       <div className='playerName'>{props.userName}</div>
       {/* <Button variant='primary' onClick={() => navigate('/character.jsx')}>
         Play!!!!
       </Button> */}
-
+    
       <Button
           size = "lg"
           variant="dark"
           onClick={() => navigate(`/character`)}
         >
-          PLAY ! ! ! 
+          PLAY!
       </Button>
       <br></br>
       <Button variant='secondary' onClick={() => logout()}>
         Logout
       </Button>
+    
     </div>
   );
 }
