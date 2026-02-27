@@ -107,6 +107,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
 - [ ] **Hooks** - I did not complete this part of the deliverable.
 
+
+There are some parts of both, but regretably neither are complete.
+
 Personal Notes:
 
 Arrow Functions can help very quickly with passing information and what not
@@ -154,11 +157,6 @@ const e = new Employee('Eich', 'programmer');
 console.log(e.print());
 // OUTPUT: My name is Eich. I am a programmer
 ```
-
-
-
-
-
 
 
 ## 🚀 Service deliverable
