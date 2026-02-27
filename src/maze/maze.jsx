@@ -31,6 +31,44 @@ export function Maze({user}) {
     setIndex((i) => (i - 1 + images.length) % images.length);
   }
 
+
+
+  //We have this tree of nodes
+
+
+  //We start at the top
+
+  //if right node is not visited and exists
+
+  //if left node is not visited and exists
+
+  //Both map item is displayed
+
+  //If one is not visited or doesn't exist, we display the go back function
+
+  //We will save in the function the parent node, of wherever we traverse. With the exception of the first time
+
+  //if we ever get to a dead end, we give the button of go back.
+
+
+
+
+  //The buttons will have to be changed to traverse the nodes, not display images.
+
+
+  //
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <main>
       
