@@ -67,7 +67,7 @@ export default function App() {
         user={userName}
         />} />
 
-        <Route path='/rock_paper_scissors' element={<Rock_Paper_Scissors userName={userName}/>} />
+        <Route path='/rock_paper_scissors' element={<Rock_Paper_Scissors userName={userName} character={character}/>} />
         <Route path='/victory' element={<Victory />} />
         
         <Route path='/login' element={<Login

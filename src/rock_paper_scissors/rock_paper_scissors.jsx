@@ -7,15 +7,23 @@ import c2 from "../character/characters/character_2.png";
 import c3 from "../character/characters/character_3.png";
 import minotaur from "./the_minotuar.png"; 
 
-export function Rock_Paper_Scissors() {
+export function Rock_Paper_Scissors({userName, character}) {
 
   const navigate = useNavigate();
+
+
+
+  function fight(userInput) {
+    
+
+
+  }
+
   
   return (
     <main>
-      <h4>World: Inert messages that comes from the websocket or game</h4>
       <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
-      Username Displayed
+      {userName}
       </div>
       {/* <input 
       type="text" 
@@ -33,7 +41,7 @@ export function Rock_Paper_Scissors() {
 
       <img 
         id="character-img"
-        src = {c1}
+        src = {character}
         width="400" 
         alt="Character" /> 
 

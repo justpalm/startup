@@ -2,10 +2,17 @@ constructor(maps) {
     const [map] = null;
 
     // Construct a map
-    setInterval(() => {
-      const int = Math.floor(Math.random() * 3);
 
-      if int == 1:
+    const int = Math.floor(Math.random() * 3);
+
+
+      function nextImage() {
+        setIndex((i) => (i + 1) % images.length);
+        }
+
+      function prevImage() {
+        setIndex((i) => (i - 1 + images.length) % images.length);
+        }
     
         
 
