@@ -7,7 +7,10 @@ import turnRight from "./maze_images/turn_right.png";
 import turnLeft from "./maze_images/turn_left.png";
 import bothOptions from "./maze_images/both_options.png";
 
-export function Maze() {
+import{ Players } from "../players.jsx"
+
+
+export function Maze({user}) {
 
   const navigate = useNavigate();
 
@@ -29,10 +32,13 @@ export function Maze() {
   }
 
   return (
-    <main className="container-fluid text-center">
-      <h4>World: Messages that come from the websocket</h4>
-      <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
-      Username Displayed
+    <main>
+      
+      <Players userName={user} />
+      
+      <div className="playerName" 
+       style={{ fontSize: '3rem', fontWeight: 'bold'}}>
+      {user}
       </div>
 
       <div style={{ fontSize: '4rem', fontWeight: 'bold', fontFamily: '"Cinzel", serif',}}>
@@ -67,7 +73,7 @@ export function Maze() {
       <input
         type="text"
         id="count"
-        value="Can't go left! Etc."
+        value={user}
         readOnly
       />
 

@@ -54,8 +54,8 @@ export default function App() {
 
         <Route path='/weather' element={<Weather />} />
         <Route path='/character' element={<Character 
+        user={userName}
         onCharacterChange={(character) => {
-          userName
           setCharacter(character);
           }}
         
@@ -64,11 +64,9 @@ export default function App() {
         />} />
         <Route path='/defeat' element={<Defeat />} />
         <Route path='/maze' element={<Maze 
-        userName={userName}
-
-        
-        
+        user={userName}
         />} />
+
         <Route path='/rock_paper_scissors' element={<Rock_Paper_Scissors userName={userName}/>} />
         <Route path='/victory' element={<Victory />} />
         

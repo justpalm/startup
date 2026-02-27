@@ -21,7 +21,7 @@ export function Authenticated(props) {
         alignItems: 'center',      // vertical (needs height on parent)
         height: '200px'            // or whatever height you need
       }}>
-      <div className='playerName'>{props.userName}</div>
+      <div className='playerName' style={{ fontSize: '3rem', fontWeight: 'bold'}}>{props.userName}</div>
       {/* <Button variant='primary' onClick={() => navigate('/character.jsx')}>
         Play!!!!
       </Button> */}

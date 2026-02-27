@@ -6,8 +6,9 @@ import c1 from "./characters/character_1.png";
 import c2 from "./characters/character_2.png";
 import c3 from "./characters/character_3.png";
 import "./character.css";
+import{ Players } from "../players.jsx"
 
-export function Character(userName) {
+export function Character({ user, onCharacterChange }) {
   const images = [
     c1,
     c2,
@@ -26,14 +27,18 @@ export function Character(userName) {
     setIndex((i) => (i - 1 + images.length) % images.length);
   }
 
+  function chooseCharacter(character) {
+    localStorage.setItem('character', character);
+    onCharacterChange(character); 
+  }
   return (
-    <main>
 
-       <h4>World: Messages that come from the websocket</h4>
-       <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
-      {
-      console.log(userName)
-    }
+    <main>
+      
+      <Players userName={user} />
+       <div className="playerName" 
+       style={{ fontSize: '3rem', fontWeight: 'bold'}}>
+      {user}
       </div>
 
       <div style={{ fontSize: '4rem', fontWeight: 'bold', fontFamily: '"Cinzel", serif',}}>
@@ -42,8 +47,6 @@ export function Character(userName) {
       </div>
 
 
-
-     
 
       {/* Character Image */}
       <img
@@ -68,30 +71,22 @@ export function Character(userName) {
       onClick={nextImage}>{">>>"}
       </Button>
       </div>
-
-  
-      <input
-      type="text"
-      id="count"
-      value={localStorage.getItem(userName)}
-      readOnly
-      />
-
-         
+      <br></br>
 
 
       {/* Fight Button */}
-      
-        <span></span>
       <Button
-          size = "lg"
-          variant="outline-danger"
-          onClick={() => navigate("/maze")}
-        >
-        ⚔️ FIGHT ⚔️
-      </Button>
-        <span></span>
-
+      size="lg"
+      variant="outline-danger"
+      onClick={() => {
+        chooseCharacter(images[index]);  // Save current character first
+        navigate("/maze");              // Then navigate
+      }}
+    >
+      ⚔️ FIGHT ⚔️
+    </Button>
+        
+      <br></br>
       <Button
           variant="outline-warning"
           onClick={() => navigate("/")}

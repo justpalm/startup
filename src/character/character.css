@@ -74,6 +74,12 @@ table {
   mix-blend-mode: multiply;   /* or screen, overlay, lighten, etc. */
 }
 
+.playerName {
+  color: rgb(214, 210, 209);
+  font-size: 2.4em;
+  padding: 0.5em;
+}
+
 footer a {
   float:left;
 }
