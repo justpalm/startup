@@ -16,8 +16,7 @@ export function Rock_Paper_Scissors({userName, character}) {
 
   //Simulates the fighting of the Minotaur
   function fight(userInput) {
-    // const enemy = Math.floor(Math.random() * 3) + 1;
-    const enemy = userInput
+    const enemy = Math.floor(Math.random() * 3) + 1;
 
     
 
@@ -70,15 +69,8 @@ export function Rock_Paper_Scissors({userName, character}) {
   
   return (
     <main>
-      <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
-      {userName}
-      </div>
-      {/* <input 
-      type="text" 
-      id="count" 
-      value="Time - 4:32" readOnly />  {} */}
-      
-      
+      <br></br>
+    
       
       <img 
         id="Minotaur" 
