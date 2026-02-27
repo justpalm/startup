@@ -108,12 +108,12 @@ export function Maze({user}) {
 
       {/* comments here are fine */}
 
-      <input
+      {/* <input
         type="text"
         id="count"
         value={user}
         readOnly
-      />
+      /> */}
 
       {/* This button will appear only when the Minotaur appears. 
       That function will be implemented later */}
