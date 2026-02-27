@@ -7,14 +7,57 @@ import c2 from "../character/characters/character_2.png";
 import c3 from "../character/characters/character_3.png";
 import minotaur from "./the_minotuar.png"; 
 
+
 export function Rock_Paper_Scissors({userName, character}) {
 
   const navigate = useNavigate();
 
 
-
+  //Simulates the fighting of the Minotaur
   function fight(userInput) {
-    
+    const enemy = Math.floor(Math.random() * 3) + 1;
+
+    //1 is rock
+    //2 is paper
+    //3 is scissors
+
+    //1 beats 3
+    //2 beats 1
+    //3 beats 2
+
+    if (userInput === 3 && enemy === 2) {
+      navigate("/victory")
+    }
+
+    if (userInput === 1 && enemy === 3) {
+      navigate("/victory")
+    }
+
+    if (userInput === 2 && enemy === 1) {
+      navigate("/victory")
+    }
+
+
+    if (enemy === 3 && userInput === 2) {
+      navigate("/defeat")
+    }
+
+    if (enemy === 1 && userInput === 3) {
+      navigate("/defeat")
+    }
+
+    if (enemy === 2 && userInput === 1) {
+      navigate("/defeat")
+    }
+
+
+    if (userInput.value === enemy) {
+      //return TRY AGAIN message!!
+    }
+
+
+
+
 
 
   }
@@ -50,14 +93,14 @@ export function Rock_Paper_Scissors({userName, character}) {
       <br></br>
       <div>
       <Button 
+      variant = "light"
+      onClick={() => fight(1)}>🪨</Button>  
+      <Button 
       variant= "light"
-      onClick={() => {}}>✂️</Button>
+      onClick={() => fight(2)}>✂️</Button>
       <Button 
       variant = "light"
-      onClick={() => {}}>🪨</Button>
-      <Button 
-      variant = "light"
-      onClick={() => {}}>📄</Button>
+      onClick={() => fight(3)}>📄</Button>
       </div>
       <br></br>
 
