@@ -34,6 +34,7 @@ export function Login({ userName, authState, onAuthChange }) {
       </div>
 
     
+    
       <nav>
         <menu>
           <h2>Leaderboard:</h2>

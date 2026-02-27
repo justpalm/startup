@@ -11,11 +11,15 @@ import minotaur from "./the_minotuar.png";
 export function Rock_Paper_Scissors({userName, character}) {
 
   const navigate = useNavigate();
+  const [result, setResult] = useState('');
 
 
   //Simulates the fighting of the Minotaur
   function fight(userInput) {
-    const enemy = Math.floor(Math.random() * 3) + 1;
+    // const enemy = Math.floor(Math.random() * 3) + 1;
+    const enemy = userInput
+
+    
 
     //1 is rock
     //2 is paper
@@ -27,38 +31,39 @@ export function Rock_Paper_Scissors({userName, character}) {
 
     if (userInput === 3 && enemy === 2) {
       navigate("/victory")
+      return
     }
 
     if (userInput === 1 && enemy === 3) {
       navigate("/victory")
+      return
     }
 
     if (userInput === 2 && enemy === 1) {
       navigate("/victory")
+      return
     }
 
 
     if (enemy === 3 && userInput === 2) {
       navigate("/defeat")
+      return
     }
 
     if (enemy === 1 && userInput === 3) {
       navigate("/defeat")
+      return
     }
 
     if (enemy === 2 && userInput === 1) {
       navigate("/defeat")
+      return
     }
 
 
-    if (userInput.value === enemy) {
-      //return TRY AGAIN message!!
+    if (userInput === enemy) {
+      setResult('Try Again!')
     }
-
-
-
-
-
 
   }
 
@@ -79,18 +84,25 @@ export function Rock_Paper_Scissors({userName, character}) {
         id="Minotaur" 
         src={minotaur}
         width="400" 
-        alt="Minotaur" />  
+        alt="Minotaur"/>  
 
 
       <img 
         id="character-img"
         src = {character}
         width="400" 
-        alt="Character" /> 
+        alt="Character"/> 
 
       {/* Fight area */}
       {/* <p> Character from Database appears here */}
       <br></br>
+
+      {result === 'Try Again!' && 
+      <div style={{ fontSize: '1rem', fontWeight: 'bold'}}>
+      Try Again!
+      </div>}
+      <br></br>
+
       <div>
       <Button 
       variant = "light"
@@ -104,7 +116,7 @@ export function Rock_Paper_Scissors({userName, character}) {
       </div>
       <br></br>
 
-      <Button 
+      {/* <Button 
       variant="success"
       onClick={() => navigate("/victory")}
       >
@@ -116,7 +128,7 @@ export function Rock_Paper_Scissors({userName, character}) {
       onClick={() => navigate("/defeat")}
       >
       Defeat
-      </Button>
+      </Button> */}
 
       <br></br>
 
