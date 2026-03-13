@@ -31,7 +31,7 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // CreateAuth a new user
-apiRouter.post('/auth/create', async (req, res) => {~
+apiRouter.post('/auth/create', async (req, res) => {
   if (await findUser('email', req.body.email)) {
     res.status(409).send({ msg: 'Existing user' });
   } else {
@@ -76,8 +76,13 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
+
+//Here's the added Third Party
+
 //Get Weather
-apiRouter.get()
+apiRouter.get('/weather', verifyAuth, (_req, res) => {
+  res.send(weather);
+});
 
 // GetScores
 apiRouter.get('/scores', verifyAuth, (_req, res) => {
