@@ -163,12 +163,12 @@ console.log(e.print());
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Supports registration, login, logout, and restricted endpoint** - I did not complete this part of the deliverable.
+- [X] **Node.js/Express HTTP service** - I do have the node and Express working, the Simon helped a ton with this
+- [X] **Static middleware for frontend** - Yes, I once again was able to see this with Simon
+- [ ] **Calls to third party endpoints** - There are attempted calls; unfortunately was not able to find out the intricacies of it
+- [X] **Backend service endpoints** - There are endpoints in the backend that call and work
+- [X] **Frontend calls service endpoints** - Yes, there are calls from the front end to the backend.
+- [X] **Supports registration, login, logout, and restricted endpoint** - This function is does complete, it doesn't fuflifll all the functions I was wanting; but id does at least do this very well.
 
 
 ## 🚀 DB deliverable
