@@ -42,6 +42,12 @@ export function Authenticated(props) {
       <Button variant='secondary' onClick={() => logout()}>
         Logout
       </Button>
+
+      <Button
+          size = "sm"
+          variant="dark"
+          onClick={() => navigate(`/weather`)}
+        > Weather?</Button>
     
     </div>
   );

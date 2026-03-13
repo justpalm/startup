@@ -46,9 +46,9 @@ menu {
 }
 
 table {
-  width: 40%;           /* Critical: not 100% */
-  margin: 0 auto;       /* Centers it */
-  display:inline-table      /* Ensures block behavior */
+  width: 40%;           
+  margin: 0 auto;       
+  display:inline-table      
 }
 
 .navbar-brand {

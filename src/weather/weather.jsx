@@ -1,59 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 import provo from "./provo.png"; 
-
-
-//  useEffect(() => {
-//     const fetchWeather = async () => {
-//       try {
-//         // Step 1: Get Provo points
-//         const pointsRes = await fetch(
-//           "https://api.weather.gov/points/40.2338,-111.6585",
-//           { headers: { "User-Agent": "WeatherApp/1.0" } }
-//         );
-//         const points = await pointsRes.json();
-        
-//         // Step 2: Get current observation
-//         const obsRes = await fetch(points.properties.observationStations[0] + "/observations/latest", {
-//           headers: { "User-Agent": "WeatherApp/1.0" }
-//         });
-//         const obs = await obsRes.json();
-        
-//         // Convert Kelvin to Fahrenheit
-//         const tempK = obs.properties.temperature?.value;
-//         setTempF(tempK ? ((tempK - 273.15) * 9/5 + 32).toFixed(0) + "°" : "N/A");
-//         setPrecip("N/A"); // NWS precip is probabilistic, needs forecast endpoint
-//         setLoading(false);
-//       } catch (error) {
-//         setTempF("Error");
-//         setPrecip("Error");
-//         setLoading(false);
-//         console.error("Weather fetch failed:", error);
-//       }
-//     };
-
-//     fetchWeather();
-//   }, []);
-
-
-function logout() {
-    fetch(`/api/weatehr`, {
-      method: 'get',
-    })
-      .catch(() => {
-        // Logout failed. Assuming offline
-      })
-      .finally(() => {
-        localStorage.removeItem('userName');
-        props.onLogout();
-      });
-  }
-
-
-
-
 
 
 export function Weather() {
@@ -61,6 +10,42 @@ export function Weather() {
   const navigate = useNavigate();
   const [tempF, setTempF] = useState("Loading...")
   const [precip, setPrecip] = useState("Loading...")
+
+
+const fetchWeather = async () => {
+
+const [tempF, setTempF] = useState("Loading...");
+const [precip, setPrecip] = useState("N/A");
+const [loading, setLoading] = useState(true);
+
+
+try {
+  setLoading(true);
+  const response = await fetch('/api/weather', {
+    method: 'GET',
+    credentials: 'include', // Sends auth cookie to backend
+  });
+  
+  if (!response.ok) throw new Error('Weather fetch failed');
+  
+  const data = await response.json();
+  setTempF(data.temperatureF + "°");
+  setPrecip(data.precip || "N/A");
+} catch (error) {
+  console.error('Weather error:', error);
+  setTempF("Error");
+  setPrecip("Error");
+} finally {
+  setLoading(false);
+}
+};
+
+useEffect(() => {
+fetchWeather();
+  }, []);
+
+
+
   
   return (
     <main className="container-fluid bg-secondary text-center">
@@ -82,7 +67,7 @@ export function Weather() {
         <Button
           variant="outline"
           size = "lg"
-          onClick={() => navigate("/weather")}
+          onClick={() => weather()}
         >
           Refresh 
         </Button>
