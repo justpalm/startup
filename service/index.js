@@ -76,25 +76,6 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
-
-//Here's the added Third Party
-
-//Get Weather
-apiRouter.get('/weather', verifyAuth, (_req, res) => {
-  const lang = "40.2335" 
-  const long = "111.6670"
-  
-  fetch(`https://api.weather.gov/points/${lat},${lon}`, {
-      headers: { 'User-Agent': 'CS260-WeatherApp/1.0' }
-    });
-    const points = await pointsRes.json();
-
-  
-  
-  
-    res.send(weather);
-});
-
 // GetScores
 apiRouter.get('/scores', verifyAuth, (_req, res) => {
   res.send(scores);

@@ -7,40 +7,34 @@ import provo from "./provo.png";
 
 export function Weather() {
 
-  const navigate = useNavigate();
-  
-  const [tempF, setTempF] = useState("Loading...");
-  const [precip, setPrecip] = useState("N/A");
-  const [loading, setLoading] = useState(true);
 
 
 
-const fetchWeather = async () => {
+React.useEffect(() => {
+    fetch('https://api.weather.gov/points/40.2338,-111.6585')
+      .then((response) => response.json())
+      .then((data) => {
+        const containerEl = document.querySelector('#picture');
 
-try {
-  setLoading(true);
-  const response = await fetch('/api/weather', {
-    method: 'GET',
-    credentials: 'include', // Sends auth cookie to backend
-  });
-  
-  if (!response.ok) throw new Error('Weather fetch failed');
-  
-  const data = await response.json();
-  setTempF(data.temperatureF + "°");
-  setPrecip(data.precip || "N/A");
-} catch (error) {
-  console.error('Weather error:', error);
-  setTempF("Error");
-  setPrecip("Error");
-} finally {
-  setLoading(false);
-}
-};
+        const width = containerEl.offsetWidth;
+        const height = containerEl.offsetHeight;
+        const apiUrl = `https://picsum.photos/id/${data[0].id}/${width}/${height}?grayscale`;
+        setImageUrl(apiUrl);
+      })
+      .catch();
 
-useEffect(() => {
-fetchWeather();
+    fetch('https://quote.cs260.click')
+      .then((response) => response.json())
+      .then((data) => {
+        setQuote(data.quote);
+        setQuoteAuthor(data.author);
+      })
+      .catch();
   }, []);
+
+
+
+
 
 
 
@@ -65,7 +59,7 @@ fetchWeather();
         <Button
           variant="outline"
           size = "lg"
-          onClick={() => weather()}
+          onClick={() => Weather()}
         >
           Refresh 
         </Button>
@@ -86,11 +80,11 @@ fetchWeather();
       
 
       <div>
-        <label for="count">☀️Farenheit</label>
-        <input type="text" id="count" value= {tempF} readonly />
+        <label>☀️Farenheit</label>
+        {/* <input value= {tempF} readOnly /> */}
         <br />
-        <label for="count">🌧️% of Rain </label>
-        <input type="text" id="count" value= {precip} readonly />
+        <label>🌧️% of Rain </label>
+        {/* <input value= {precip} readOnly /> */}
       </div>
 
     </main>
