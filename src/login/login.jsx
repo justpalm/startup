@@ -57,7 +57,7 @@ export function Login({ userName, authState, onAuthChange }) {
         </menu>
       </nav>
       </div>
-
+      <br></br>
       <div>
         {authState === AuthState.Authenticated && (
           <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />

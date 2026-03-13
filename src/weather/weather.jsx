@@ -8,16 +8,14 @@ import provo from "./provo.png";
 export function Weather() {
 
   const navigate = useNavigate();
-  const [tempF, setTempF] = useState("Loading...")
-  const [precip, setPrecip] = useState("Loading...")
+  
+  const [tempF, setTempF] = useState("Loading...");
+  const [precip, setPrecip] = useState("N/A");
+  const [loading, setLoading] = useState(true);
+
 
 
 const fetchWeather = async () => {
-
-const [tempF, setTempF] = useState("Loading...");
-const [precip, setPrecip] = useState("N/A");
-const [loading, setLoading] = useState(true);
-
 
 try {
   setLoading(true);

@@ -25,9 +25,9 @@ export function Authenticated(props) {
     <div style={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',  // horizontal
-        alignItems: 'center',      // vertical (needs height on parent)
-        height: '200px'            // or whatever height you need
+        justifyContent: 'center', 
+        alignItems: 'center',     
+        height: '200px'            
       }}>
       <div className='playerName' style={{ fontSize: '3rem', fontWeight: 'bold'}}>{props.userName}</div>
     
@@ -38,17 +38,23 @@ export function Authenticated(props) {
         >
           PLAY!
       </Button>
-      <br></br>
-      <Button variant='secondary' onClick={() => logout()}>
+      
+      <Button 
+      size = "lg"
+      variant='secondary' onClick={() => logout()}>
         Logout
       </Button>
-
+      <br></br>
       <Button
           size = "sm"
-          variant="dark"
+          variant= "info"
           onClick={() => navigate(`/weather`)}
         > Weather?</Button>
-    
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   );
 }
