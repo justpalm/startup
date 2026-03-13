@@ -22,9 +22,6 @@ export function Authenticated(props) {
         height: '200px'            // or whatever height you need
       }}>
       <div className='playerName' style={{ fontSize: '3rem', fontWeight: 'bold'}}>{props.userName}</div>
-      {/* <Button variant='primary' onClick={() => navigate('/character.jsx')}>
-        Play!!!!
-      </Button> */}
     
       <Button
           size = "lg"

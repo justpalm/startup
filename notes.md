@@ -17,6 +17,17 @@ Launching my AMI I initially put it on a private subnet. Even though it had a pu
 
 No problems worked just like it said in the [instruction](https://github.com/webprogramming260/.github/blob/main/profile/webServers/https/https.md).
 
+
+Express exists to make life easier!
+const express = require('express'); 
+^^This imports the express library
+
+require('express') loads the Express library from node_modules and returns its main functionality as an object, which you assign to the express variable. You can then use express() to create an app instance.
+
+
+
+
+
 ## HTML
 
 This was easy. I was careful to use the correct structural elements such as header, footer, main, nav, and form. The links between the three views work great using the `a` element.
