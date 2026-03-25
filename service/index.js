@@ -71,13 +71,13 @@ const verifyAuth = async (req, res, next) => {
 };
 
 // GetScores
-apiRouter.get('/scores', verifyAuth, async (req, res) => {
+apiRouter.get('/play', verifyAuth, async (req, res) => {
   const scores = await DB.getHighScores();
   res.send(scores);
 });
 
 // SubmitScore
-apiRouter.post('/score', verifyAuth, async (req, res) => {
+apiRouter.post('/victory', verifyAuth, async (req, res) => {
   const scores = await updateScores(req.body);
   res.send(scores);
 });
