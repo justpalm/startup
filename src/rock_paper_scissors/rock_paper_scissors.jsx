@@ -45,7 +45,6 @@ function handleVictory() {
     navigate("/victory", {
       state: {
         userName,
-        character,
         timeToWinMs: finalTime,
       },
     });

@@ -8,7 +8,7 @@ export function Victory() {
  const navigate = useNavigate();
  const location = useLocation();
 
-  const { userName, character, timeToWinMs } = location.state || {};
+  const { userName, timeToWinMs } = location.state || {};
 
   return (
     <main className="container-fluid bg-secondary text-center">
@@ -18,7 +18,6 @@ export function Victory() {
       </div>
 
       <p>Player: {userName}</p>
-      <p>Character: {character}</p>
       <p>Time to win: {(timeToWinMs / 1000).toFixed(1)} seconds</p>
 
 
