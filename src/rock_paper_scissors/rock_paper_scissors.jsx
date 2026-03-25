@@ -94,11 +94,9 @@ function handleVictory() {
       return handleDefeat();
     }
 
-
     if (userInput === enemy) {
       setResult('Try Again!')
     }
-
   }
 
   

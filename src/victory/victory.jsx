@@ -8,7 +8,24 @@ export function Victory() {
  const navigate = useNavigate();
  const location = useLocation();
 
-  const { userName, timeToWinMs } = location.state || {};
+const { userName, timeToWinMs } = location.state || {};
+
+
+async function saveScore() {
+  await fetch("/api/scores", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userName,
+      timeToWinMs: finalTime,
+    }),
+  });
+
+
+
+
 
   return (
     <main className="container-fluid bg-secondary text-center">
