@@ -178,6 +178,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [X] **Stores data in MongoDB** - Yup! It does in fact store data there. It didn't seem that hard with help from the Simon code, but it is cool to see it pop up on the MongoDB.
 - [X] **Stores credentials in MongoDB** - It does safely and securely save credentials of username and password!
 
+There was a lot of this that I feel I didn't understand, but I thought it was cool to see the services and database communicated effecitevly. I know that in the future that will be an important skill to have solid.
+
 ## 🚀 WebSocket deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
