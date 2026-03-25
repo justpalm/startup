@@ -7,6 +7,10 @@ import provo from "./provo.png";
 
 export function Weather() {
 
+  const navigate = useNavigate();
+
+
+// I tried to get the third part service, but it did not work
 
 
 
@@ -31,10 +35,6 @@ React.useEffect(() => {
       })
       .catch();
   }, []);
-
-
-
-
 
 
 

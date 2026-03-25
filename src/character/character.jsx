@@ -73,14 +73,13 @@ export function Character({ user, onCharacterChange }) {
       </div>
       <br></br>
 
-
       {/* Fight Button */}
       <Button
       size="lg"
       variant="outline-danger"
       onClick={() => {
         chooseCharacter(images[index]);  // Save current character first
-        navigate("/maze");              // Then navigate
+        navigate("/rock_paper_scissors");              // Then navigate
       }}
     >
       ⚔️ FIGHT ⚔️
