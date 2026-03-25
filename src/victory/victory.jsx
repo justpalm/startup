@@ -22,6 +22,7 @@ async function saveScore() {
       timeToWinMs: finalTime,
     }),
   });
+}
 
 
 
