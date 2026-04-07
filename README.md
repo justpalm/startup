@@ -190,3 +190,10 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
 - [ ] **Application is fully functional** - I did not complete this part of the deliverable.
 
+
+I think the most important thing to rememebr from the Simon implementation is that i genuinely isn't that complicated, it just might take a little bit of poking around to see what data we can send to one another as things workout.
+
+- The Websocket itself updgrades HTML connections
+- If should allow for a live transfer and debugging what is sent through will be crucial
+- Look to Simon to know how to catch and deal with things.
+

@@ -25,9 +25,6 @@ async function saveScore() {
 }
 
 
-
-
-
   return (
     <main className="container-fluid bg-secondary text-center">
 
