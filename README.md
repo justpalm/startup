@@ -196,4 +196,6 @@ I think the most important thing to rememebr from the Simon implementation is th
 - The Websocket itself updgrades HTML connections
 - If should allow for a live transfer and debugging what is sent through will be crucial
 - Look to Simon to know how to catch and deal with things.
+- Make sure vite is configured correctly
+
 
