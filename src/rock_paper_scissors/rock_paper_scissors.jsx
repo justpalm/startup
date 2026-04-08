@@ -6,6 +6,7 @@ import c1 from "../character/characters/character_1.png";
 import c2 from "../character/characters/character_2.png";
 import c3 from "../character/characters/character_3.png";
 import minotaur from "./the_minotuar.png"; 
+import { GameEvent, GameNotifier } from './gameNotifier';
 
 
 export function Rock_Paper_Scissors({userName, character}) {
@@ -18,6 +19,7 @@ export function Rock_Paper_Scissors({userName, character}) {
   const startTimeRef = useRef(Date.now());
   const intervalRef = useRef(null);
   const hasWonRef = useRef(false);
+  
 
   useEffect(() => {
     startTimeRef.current = Date.now();
@@ -48,6 +50,8 @@ function handleVictory() {
         timeToWinMs: finalTime,
       },
     });
+
+    GameNotifier.broadcastEvent(userName, GameEvent.End, finalTime)
   }
 
   //Handles the Defeat pages
