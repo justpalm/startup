@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 import Button from 'react-bootstrap/Button';
 
+import { GameEvent, GameNotifier } from '../gameNotifier';
+
 import './authenticated.css';
 
 export function Authenticated(props) {
@@ -20,6 +22,8 @@ export function Authenticated(props) {
         localStorage.removeItem('userName');
         props.onLogout();
       });
+
+    GameNotifier.broadcastEvent(userName, GameEvent.End, {})
   }
 
   return (
@@ -35,7 +39,10 @@ export function Authenticated(props) {
       <Button
           size = "lg"
           variant="dark"
-          onClick={() => navigate(`/character`)}
+          onClick={() => {
+          navigate(`/character`);
+          GameNotifier.broadcastEvent(props.userName, GameEvent.Start, {});
+        }}
         >
           PLAY!
       </Button>
