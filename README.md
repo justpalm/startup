@@ -186,9 +186,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 - [X] **Backend listens for WebSocket connection** - I implemented the Simon code and it worked!
 - [X] **Frontend makes WebSocket connection** - Once again, used Simon to see how to implement this.
-- [ ] **Data sent over WebSocket connection** - Yes! The data that is sent over is the victory time of the player when they finish.
-- [ ] **WebSocket data displayed** - Yup! It is displayed at the top left. Granted, this is only displayed when someone stays on the chracter screen, but it is displayed there! 
-- [ ] **Application is fully functional** - The app works, it's fun that it got this far! I would love to iron it out more, but it's functionalities are there! 
+- [X] **Data sent over WebSocket connection** - Yes! The data that is sent over is the victory time of the player when they finish.
+- [X] **WebSocket data displayed** - Yup! It is displayed at the top left. Granted, this is only displayed when someone stays on the chracter screen, but it is displayed there! 
+- [X] **Application is fully functional** - The app works, it's fun that it got this far! I would love to iron it out more, but it's functionalities are there! 
 
 
 I think the most important thing to rememebr from the Simon implementation is that i genuinely isn't that complicated, it just might take a little bit of poking around to see what data we can send to one another as things workout.

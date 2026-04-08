@@ -18,7 +18,7 @@ class GameEventNotifier {
 
   constructor() {
     let port = window.location.port;
-    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
     this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
     this.socket.onopen = (event) => {
       this.receiveEvent(new EventMessage('Simon', GameEvent.System, { msg: 'connected' }));

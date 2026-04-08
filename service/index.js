@@ -8,8 +8,12 @@ const { peerProxy } = require('./peerProxy.js');
 
 const authCookieName = 'token';
 
-// The service port may be set on the command line
-const port = process.argv.length > 2 ? process.argv[2] : 3000;
+// // The service port may be set on the command line
+// const port = process.argv.length > 2 ? process.argv[2] : 3000;
+
+const port = process.env.PORT || (process.argv.length > 2 ? process.argv[2] : 4000);
+
+app.set('trust proxy', 1);
 
 // JSON body parsing using built-in middleware
 app.use(express.json());
@@ -26,25 +30,25 @@ app.use(`/api`, apiRouter);
 
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) => {
-  if (await findUser('username', req.body.username)) {
+  if (await findUser('email', req.body.email)) {
     res.status(409).send({ msg: 'Existing user' });
   } else {
-    const user = await createUser(req.body.username, req.body.password);
+    const user = await createUser(req.body.email, req.body.password);
 
     setAuthCookie(res, user.token);
-    res.send({ username: user.username });
+    res.send({ email: user.email });
   }
 });
 
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
-  const user = await findUser('username', req.body.username);
+  const user = await findUser('email', req.body.email);
   if (user) {
     if (await bcrypt.compare(req.body.password, user.password)) {
       user.token = uuid.v4();
       await DB.updateUser(user);
       setAuthCookie(res, user.token);
-      res.send({ username: user.username });
+      res.send({ email: user.email });
       return;
     }
   }
@@ -55,7 +59,8 @@ apiRouter.post('/auth/login', async (req, res) => {
 apiRouter.delete('/auth/logout', async (req, res) => {
   const user = await findUser('token', req.cookies[authCookieName]);
   if (user) {
-    await DB.updateUserRemoveAuth(user);
+    delete user.token;
+    DB.updateUser(user);
   }
   res.clearCookie(authCookieName);
   res.status(204).end();
@@ -72,14 +77,14 @@ const verifyAuth = async (req, res, next) => {
 };
 
 // GetScores
-apiRouter.get('/play', verifyAuth, async (req, res) => {
+apiRouter.get('/scores', verifyAuth, async (req, res) => {
   const scores = await DB.getHighScores();
   res.send(scores);
 });
 
 // SubmitScore
-apiRouter.post('/victory', verifyAuth, async (req, res) => {
-  const scores = await updateScores(req.body);
+apiRouter.post('/score', verifyAuth, async (req, res) => {
+  const scores = updateScores(req.body);
   res.send(scores);
 });
 
@@ -99,11 +104,11 @@ async function updateScores(newScore) {
   return DB.getHighScores();
 }
 
-async function createUser(username, password) {
+async function createUser(email, password) {
   const passwordHash = await bcrypt.hash(password, 10);
 
   const user = {
-    username: username,
+    email: email,
     password: passwordHash,
     token: uuid.v4(),
   };
