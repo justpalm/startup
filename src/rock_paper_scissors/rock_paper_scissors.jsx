@@ -51,7 +51,9 @@ function handleVictory() {
       },
     });
 
-    const newScore = { name: userName, score: finalTime, date: date };
+    finalTime = ((finalTime / 1000).toFixed(1))
+
+    const newScore = {score: finalTime};
 
     GameNotifier.broadcastEvent(userName, GameEvent.End, newScore)
   }
