@@ -42,8 +42,7 @@ async function saveScore() {
         size = "lg">
         Go Back
       </Button>
-
-
+    
     </main>
   );
 }

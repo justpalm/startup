@@ -51,7 +51,9 @@ function handleVictory() {
       },
     });
 
-    GameNotifier.broadcastEvent(userName, GameEvent.End, (finalTime.toString))
+    const newScore = { name: userName, score: finalTime, date: date };
+
+    GameNotifier.broadcastEvent(userName, GameEvent.End, newScore)
   }
 
   //Handles the Defeat pages
