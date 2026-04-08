@@ -7,8 +7,8 @@ import './authenticated.css';
 
 export function Authenticated(props) {
   const navigate = useNavigate();
-  const notify = GameNotifier.broadcastEvent(props.userName, GameEvent.Start, {});
 
+  
   function logout() {
     fetch(`/api/auth/logout`, {
       method: 'delete',

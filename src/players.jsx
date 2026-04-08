@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
 import { GameEvent, GameNotifier } from './gameNotifier';
 import './players.css';
 
-export function Players({userName}) {
+export function Players(props) {
+  const userName = props.userName;
 
-  const [events, setEvent] = useState([]);
+  const [events, setEvent] = React.useState([]);
 
   React.useEffect(() => {
     GameNotifier.addHandler(handleGameEvent);
@@ -12,16 +14,10 @@ export function Players({userName}) {
     return () => {
       GameNotifier.removeHandler(handleGameEvent);
     };
-  }, []);
+  });
 
   function handleGameEvent(event) {
-    setEvent((prevEvents) => {
-      let newEvents = [event, ...prevEvents];
-      if (newEvents.length > 3) {
-        newEvents = newEvents.slice(1, 3);
-      }
-      return newEvents;
-    });
+    setEvent([...events, event]);
   }
 
   function createMessageArray() {
