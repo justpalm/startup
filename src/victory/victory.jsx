@@ -31,13 +31,10 @@ async function saveScore() {
       <div style={{ fontSize: '8rem', fontFamily: '"Cinzel", serif', fontWeight: 'bold', color: '6px 6px 0 #0c5223ff', textShadow: '6px 6px 0 #706c6bff', }}>
         VICTORY!
       </div>
-
-      <p>Player: {userName}</p>
-      <p>Time to win: {(timeToWinMs / 1000).toFixed(1)} seconds</p>
+      <p style={{ fontSize: '4rem', fontFamily: '"Cinzel", serif', fontWeight: 'bold', color: '6px 6px 0 #0c5223ff', textShadow: '6px 6px 0 #706c6bff', }}>Time to win: {(timeToWinMs / 1000).toFixed(1)} seconds</p>
 
 
-      <div style={{ fontSize: '2rem', fontFamily: '"Cinzel", serif', fontWeight: 'bold'}}>
-      {userName}
+      <div style={{ fontSize: '3rem', fontFamily: '"Cinzel", serif', fontWeight: 'bold'}}>
       </div>
       <Button
         variant="outline-warning"
